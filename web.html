@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fruits | Responsive website landing page</title>
+	<link rel="stylesheet" type="text/css" href="webstylesheet.css">
+</head>
+<body>
+	<div class="chat_icon">
+			<i class="fa-solid fa-message-bot"></i>
+		</div>
+	<section>
+		<div class="bg"></div>
+		<header>
+		<a href="#" class="logo">GifTer</a>
+		<ul class="navigation">
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">What's New</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>Hii! Welcome to GifTer.</h2>
+				<p>Through GifTer we are sending your love to the people that are so close to your heart in the form of Gifts.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imageBox">
+				<img src="gift4.gif" class="fruits">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li data-text="GifTer" class="active"><img src="gift4.gif" onclick="imgSlider('gift4.gif');changeBgColor('#f08080')"></li>
+			<li data-text="GifTer"><img src="box2.png" onclick="imgSlider('box2.png');changeBgColor('#cd853f')"></li>
+			<li data-text="GifTer"><img src="gift7.gif" onclick="imgSlider('gift7.gif');changeBgColor('#008b8b')"></li>
+			<li data-text="GifTer"><img src="box3.png" onclick="imgSlider('box3.png');changeBgColor('#bc8f8f')"></li>
+			<li data-text="GifTer"><img src="gift6.gif" onclick="imgSlider('gift6.gif');changeBgColor('#5f9ea0')"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="facebook.png"></a></li>
+			<li><a href="go.html"><img src="twitter.png"></a></li>
+			<li><a href="https://www.instagram.com/abhi.sharma.7588/"><img src="instagram.png"></a></li>
+			
+		</ul>
+
+		<div class="scix chaticonborder" >
+			<ul>
+				<li>
+					<a href="bot/bot.php"><img class="chatboticon" src="bot.png" ></a></div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- ChatBot -->
+		
+	</section>
+
+
+
+	<script>
+
+		let menuToggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+
+		//change image on click.
+         function imgSlider(anything){
+         	document.querySelector('.fruits').src = anything;
+         }
+
+         //changing background color.
+         function changeBgColor(color){
+         	const bg = document.querySelector('.bg');
+         	bg.style.background = color;
+         }
+
+		//add active class in selected thmbnails.
+		let el = document.querySelectorAll('.thumb li');
+		for (let i=0; i<el.length; i++){
+			el[i].onclick = function(){
+				var c = 0;
+				while(c<el.length){
+					el[c++].className = 'check';
+				}
+				el[i].className = 'check active';
+			}
+		}
+	</script>
+
+</body>
+</html>

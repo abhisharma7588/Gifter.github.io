@@ -1,0 +1,20 @@
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+    background: linear-gradient(rgbaa(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url(pic/aaa.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+
+}
+	
+.name{
+	margin-top: 100px;
+    color:rgb(156, 141, 141);
+    text-transform: lowercase;
+
+
+
+}
